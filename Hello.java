@@ -16,11 +16,11 @@ public class Program1 {
 	int liczba = 97;
 
     	System.out.println("Hello world"); //System - klasa, println - metoda
-		System.out.println("Liczba ma wartoœæ "+liczba);
+		System.out.println("Liczba ma wartoÅ“Ã¦ "+liczba);
 
 		liczba=liczba*2;
 
-		System.out.println("Nowa wartoœæ liczby");
+		System.out.println("Nowa wartoÅ“Ã¦ liczby");
 		System.out.println(liczba);
 		main2();
     }
@@ -31,7 +31,7 @@ public class Program1 {
     	for(double x: liczby)
     		wynik+=x;
 
-    	System.out.println("œrednia liczb wynosi "+wynik/5);
+    	System.out.println("Å“rednia liczb wynosi "+wynik/5);
     	}
 }
 

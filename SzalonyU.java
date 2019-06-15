@@ -18,12 +18,12 @@ public class SzalonyU {
 
 	while(src.hasNext()){
 
-		imie=src.next();
+	    imie=src.next();
 	    imie=imie.replace("-","");
 	    imie=imie.toLowerCase();
 
 	    imie = imie.substring(0,1).toUpperCase()+ imie.substring(1);
-		LI.add(imie);
+	    LI.add(imie);
 
 
 

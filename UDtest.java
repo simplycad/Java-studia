@@ -16,6 +16,25 @@ public class UDtest {
 
 	UD ulamek1=new UD(p,q);
 	ulamek1.rozwin();
+
+	p=19;
+	q=89;
+
+	UD ulamek2=new UD(p,q);
+	ulamek2.rozwin();
+
+	p=1;
+	q=40;
+
+	UD ulamek3=new UD(p,q);
+	ulamek3.rozwin();
+
+	p=4353;
+	q=334;
+
+	UD ulamek4=new UD(p,q);
+	ulamek4.rozwin();
+
     }
 }
 
@@ -64,11 +83,11 @@ public class UDtest {
 				int index=reszty.indexOf(reszta);
 
 				for(int i=0; i<index; i++)System.out.print(cyfry.get(i));
-				System.out.print("( ");
+				System.out.print("(");
 
 				for(int i=index; i<cyfry.size(); i++)
 					System.out.print(cyfry.get(i));
-					System.out.println(" )");
+					System.out.println(") ");
 
 
 

@@ -1,24 +1,14 @@
-/**
- * @(#)TestFigure.java
- *
- *
- * @author
- * @version 1.00 2019/12/1
- */
+
 
 public class TestFigure {
 
-    /**
-     * Creates a new instance of <code>TestFigure</code>.
-     */
+
     public TestFigure() {
     }
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+
         Figure f= new Figure(10,10);
         Figure figref;
         figref=f;
@@ -26,11 +16,17 @@ public class TestFigure {
         Rectangle r= new Rectangle(5,9);
          figref=r;
          System.out.println("Pole= "+ figref.pole());
+
          Triangle t= new Triangle(5,9);
          figref=t;
          System.out.println("Pole= "+ figref.pole());
+
          Kolo k= new Kolo(6);
          figref=k;
+         System.out.println("Pole= "+ figref.pole());
+
+         Trapez g= new Trapez(6,7,8);
+         figref=g;
          System.out.println("Pole= "+ figref.pole());
     }
 }
@@ -73,5 +69,18 @@ class Kolo  extends Figure{
 	double pole(){
 		System.out.println("Pole kola: ");
 		return Math.PI*(dim1*dim1);
+	}
+}
+
+class Trapez extends Figure{
+
+	Trapez(double a,double b, double c){
+		super(a,b);
+		h=c;
+	}
+	double h;
+	double pole(){
+		System.out.println("Pole trapezu: ");
+		return ((dim1+dim2)*h)/2;
 	}
 }

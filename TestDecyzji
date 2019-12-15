@@ -1,0 +1,35 @@
+import java util.Random;
+  
+ 
+public class TestDecyzji {
+    
+    public static void main(String[] args) {
+    
+
+     
+    }
+}
+
+
+interface Stale
+{
+
+ int No = 0;
+ int Yes = 1;
+ int Maybe = 2;
+ int Later = 3;
+ int Soon = 4;
+ int Never = 5;  
+ 
+}
+    
+class Drukowanie input Stale
+{
+       
+        
+}
+
+class Decydowanie input Stale
+{
+       
+}

@@ -1,0 +1,113 @@
+public class TestStosu {
+
+
+    public TestStosu() {
+    }
+
+
+    public static void main(String[] args) {
+
+
+        StosSt mojStos= new StosSt(8);
+        for(int i =0; i<5;i++){
+              mojStos.naStos(i);
+        }
+        
+        for(int i =0; i<5;i++){
+              System.out.println( mojStos.zeStosu());
+        }
+
+
+        StosDy mojStosDynamiczny= new StosDy(8);
+              for(int i =0; i<20;i++){
+                     mojStosDynamiczny.naStos(i);
+        }
+        
+        for(int i =0; i<20;i++){
+              System.out.println( mojStosDynamiczny.zeStosu());
+        }
+  }
+
+}
+
+
+interface StosInt{
+	void naStos(int element);
+	int zeStosu();
+}
+
+
+
+class StosSt implements StosInt{
+	private int stos[];
+	private int poz;
+	StosSt(int ile){
+		stos= new int[ile];
+		poz = -1;
+	}
+
+	public int zeStosu(){
+       if(poz<0)System.out.println("Stos jest pusty");
+       else
+              return stos[poz--];
+	       return -1;
+	}
+
+
+          public void naStos(int element){
+
+           if(poz==stos.length-1)
+
+              {
+                 System.out.println("Stos jest pełny");
+                     int temp [] = new int [stos.length * 2];
+                            for(int i=0; i<stos.length; i++)
+                                   temp[i] = stos [i];
+                                          stos=temp;
+                                                stos[++poz]=element;
+                          }
+}
+	}
+
+
+
+
+class StosDy implements StosInt{
+	private int stos[];
+	private int poz;
+
+
+	StosDy(int ile){
+		stos= new int[ile];
+		poz = -1;
+	}
+	StosDy(){
+		stos= new int[8];
+		poz = -1;
+	}
+
+	public int zeStosu(){
+		if(poz<0)System.out.println("Stos jest pusty");
+		else
+			return stos[poz--];
+		return -1;
+	}
+
+         public void naStos(int element){
+
+           if(poz==stos.length-1)
+
+              {
+                 System.out.println("Stos jest pełny");
+                     int temp [] = new int [stos.length * 2];
+                            for(int i=0; i<stos.length; i++)
+                                   temp[i] = stos [i];
+                                          stos=temp;
+                                                stos[++poz]=element;
+                          }
+
+              else
+              stos[++poz]=element;
+
+       }
+}
